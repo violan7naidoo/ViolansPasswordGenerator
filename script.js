@@ -25,7 +25,7 @@ function generatePassword() {
         break;
       case "o":
       case "O":
-        saferPassword += "0";
+        saferPassword += "#";
         break;
       case " ":
         saferPassword += "_";
