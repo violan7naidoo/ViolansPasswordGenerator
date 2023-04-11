@@ -1,50 +1,99 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Password Generator</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,700;1,700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <header>
-      <h1>Password Generator</h1>
-    </header>
+body {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-family: "Raleway", sans-serif;
+  margin: 30px;
+  transition: background-color 0.9s ease-in;
+}
 
-    <form>
-      <label for="password">Enter a Password:</label>
-      <br />
-      <br />
-      <input
-        type="text"
-        id="password"
-        name="password"
-        maxlength="25"
-      /><br /><br />
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Raleway", sans-serif;
+}
 
-      <input
-        type="button"
-        value="Generate Password"
-        onclick="generatePassword()"
-      />
+form {
+  position: fixed;
+  width: 80%;
+  max-width: 500px;
+  background-color: #bcbaba;
+  padding: 20px;
+  margin: 30px;
+  border-radius: 35px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-family: "Raleway", sans-serif;
+  transition: background-color 2.1s ease-in;
+}
 
-      <br /><br />
+input[type="text"],
+input[type="password"] {
+  width: 90%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 25px;
+  font-family: "Raleway", sans-serif;
+  font-size: medium;
+  transition: background-color 2s ease-in;
+}
 
-      <label for="output">Output:</label>
-      <br />
-      <br />
-      <input type="text" id="output" name="output" readonly />
-      <br />
-      <br />
-      <button onclick="resetForm()">Reset</button>
-    </form>
-  </body>
-  <footer>
-    <p>Design by Violan Naidoo</p>
-  </footer>
-</html>
+button,
+input[type="button"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 2s ease-in;
+  font-family: "Raleway", sans-serif;
+  font-size: medium;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+.output {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #e6e6e6;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+button[type="reset"] {
+  background-color: #f44336;
+  margin-right: 10px;
+}
+
+button[type="reset"]:hover {
+  background-color: #da190b;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #e6e6e6;
+  color: #090909;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  transition: color 3s ease-in;
+}
+
+footer p {
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
