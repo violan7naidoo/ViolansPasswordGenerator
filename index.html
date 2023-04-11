@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Password Generator</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Password Generator</h1>
+    </header>
+
+    <form>
+      <label for="password">Enter a Password:</label>
+      <br />
+      <br />
+      <input
+        type="text"
+        id="password"
+        name="password"
+        maxlength="25"
+      /><br /><br />
+
+      <input
+        type="button"
+        value="Generate Password"
+        onclick="generatePassword()"
+      />
+
+      <br /><br />
+
+      <label for="output">Output:</label>
+      <br />
+      <br />
+      <input type="text" id="output" name="output" readonly />
+      <br />
+      <br />
+      <button onclick="resetForm()">Reset</button>
+    </form>
+  </body>
+</html>
