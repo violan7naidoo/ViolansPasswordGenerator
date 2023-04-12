@@ -1,6 +1,10 @@
 body {
   margin: 0;
   padding: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 h1 {
   font-family: "Raleway", sans-serif;
@@ -14,6 +18,12 @@ h1 {
   align-items: center;
   height: 100vh;
   font-family: "Raleway", sans-serif;
+}
+
+form h1 {
+  font-family: "Raleway", sans-serif;
+  color: #6b6b6b;
+  margin-left: 5px;
 }
 
 form {
