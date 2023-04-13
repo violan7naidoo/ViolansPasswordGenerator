@@ -2,6 +2,9 @@ function generatePassword() {
   // Get the user's input password
   let password = document.getElementById("password").value;
 
+  //first letter to upper case
+  password = password.charAt(0).toUpperCase() + password.slice(1);
+
   // Generate a safer password using some algorithm
   let saferPassword = "";
 
@@ -25,7 +28,7 @@ function generatePassword() {
         break;
       case "o":
       case "O":
-        saferPassword += "#";
+        saferPassword += 0;
         break;
       case " ":
         saferPassword += "_";
@@ -37,8 +40,22 @@ function generatePassword() {
     }
   }
 
+  // Add one or two random numbers to the end of the password
+  const randomNumber = Math.floor(Math.random() * 10);
+  saferPassword += randomNumber;
+  if (randomNumber < 5) {
+    saferPassword += Math.floor(Math.random() * 10);
+  }
+
   // Set the output box to the safer password
   document.getElementById("output").value = saferPassword;
+}
+
+function copyToClipboard() {
+  const passwordOutput = document.getElementById("output");
+  passwordOutput.select();
+  document.execCommand("copy");
+  alert("Password copied to clipboard!");
 }
 
 function resetForm() {
