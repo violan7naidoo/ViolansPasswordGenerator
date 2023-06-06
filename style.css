@@ -91,6 +91,13 @@ button:hover {
   transform: scale(0.95);
 }
 
+a {
+  text-decoration: none;
+}
+a:hover {
+  color: #7b7bd0;
+}
+
 #copyButton {
 }
 
